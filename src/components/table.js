@@ -11,7 +11,7 @@ class TableDisplay extends React.Component {
         <Table striped bordered hover>
         <thead>
         <tr>
-          <th>#</th>
+
           <th>display_name</th>
           <th>Latitude</th>
           <th>Longitude</th>
@@ -19,7 +19,7 @@ class TableDisplay extends React.Component {
       </thead>
       <tbody>
         <tr>
-          <td></td>
+
           <td>{this.props.displayname}</td>
           <td>{this.props.Latitude}</td>
           <td>{this.props.Longitude}</td>
