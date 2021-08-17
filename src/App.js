@@ -26,10 +26,11 @@ class App extends React.Component {
   }
 
   ShowLocations = async (e) => {
-    e.preventDefault();
+    try{
+      e.preventDefault();
     let result = await axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_YOUR_ACCESS_TOKEN}&q=${e.target.Explorer.value}&format=json`);
     let Weather = await axios.get(`${process.env.REACT_APP_API_LINK}?city_name=${e.target.Explorer.value}`);
-    console.log(Weather.data);
+    console.log(Weather);
     
     
     await this.setState({
@@ -41,6 +42,11 @@ class App extends React.Component {
       Longitude:result.data[0].lon,
 
     })
+    }
+    catch(error){
+      <p>Error: wrong word Entered </p>
+    }
+    
     // console.log(this.state.location.data[0]);
     
   }
@@ -56,17 +62,21 @@ class App extends React.Component {
 
       {this.state.displaytable && <img alt='city' src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_YOUR_ACCESS_TOKEN}&center=${this.state.Latitude},${this.state.Longitude}&zoom=12`}/>}
 
-      {this.state.weatherdata.forEach(item =>{
+      {typeof(this.state.weatherdata)==typeof([]) && this.state.weatherdata.map(item =>{
         return(
           <>
-          {this.state.displaytable && <p> {item.date}</p>}
-          {this.state.displaytable && <p>{item.description}</p>}
+          {this.state.displaytable && <p>Date: {item.date}</p>}
+          {this.state.displaytable && <p>Description : {item.description}</p>}
+          {console.log(item)}
+          {console.log(item.date)}
           
           </>
         )
 
         
       })}
+
+      
       
       </>
     )

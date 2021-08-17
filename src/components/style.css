@@ -24,3 +24,8 @@ table{
     position: relative;
     top: 100px;
 }
+p{
+    position: relative;
+    bottom: 360px;
+    left: 20px;
+}
