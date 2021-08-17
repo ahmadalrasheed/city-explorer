@@ -29,7 +29,7 @@ class App extends React.Component {
     try{
       e.preventDefault();
     let result = await axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_YOUR_ACCESS_TOKEN}&q=${e.target.Explorer.value}&format=json`);
-    let Weather = await axios.get(`${process.env.REACT_APP_API_LINK}?city_name=${e.target.Explorer.value}`);
+    let Weather = await axios.get(`${process.env.REACT_APP_API_LINK}weatherdata?city_name=${e.target.Explorer.value}`);
     console.log(Weather);
     
     
