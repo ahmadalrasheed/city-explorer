@@ -10,7 +10,7 @@ class FormDisplay extends React.Component {
 
     return (
       <>
-        <h1>City explorer</h1>
+        <h1 className='firstheader'>City explorer</h1>
         <br />
         <Form onSubmit={this.props.ShowLocations}>
           <Form.Group className="mb-3" controlId="formBasicPassword">
