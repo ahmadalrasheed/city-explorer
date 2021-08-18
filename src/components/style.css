@@ -1,8 +1,9 @@
-h1{
+.firstheader{
     text-align: center;
     font-weight: bolder;
     font-style: italic;
 }
+
 body{
     background-color: antiquewhite;
 }
@@ -11,21 +12,61 @@ form{
     position: relative;
     left: 25%;
     top:50px;
+    
 }
 button{
     margin-left: 40%;
 }
-img{
+.mapimage{
     position: relative;
-    left: 30%;
-    top:100px;
+    left: 50%;
+    top:250px;
 }
 table{
     position: relative;
     top: 100px;
+    display: inline-block;
+    left: 30%;
 }
-p{
+.mycards{
+ position: relative;
+ left:15%;
+ bottom: 500px;
+
+}
+.myfigures{
     position: relative;
-    bottom: 360px;
-    left: 20px;
+    bottom: 450px;
 }
+
+.figureheaders{
+    position: relative;
+    bottom: 450px;
+}
+
+
+
+
+
+
+/* h2{
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+} */
+/* 
+.Weatherparagraphs{
+    position: relative;
+    bottom: 340px;
+    left: 20px;
+    display:block;
+}
+.movieimages{
+    position: relative;
+    left: 30%;
+    height: 500px;
+    width: 600px;
+}
+.Movieparagraphs{
+    text-align: center;
+} */
